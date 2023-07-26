@@ -9,7 +9,9 @@
     "lint-staged": "^13.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.63.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -33,7 +35,11 @@
     }
   },
   "lint-staged": {
-    "**/*.js": []
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
@@ -48,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.8"
   }
